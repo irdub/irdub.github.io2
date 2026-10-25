@@ -1,0 +1,579 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#075b36">
+<meta name="description" content="پروفایل محسن حسینی و وب‌سایت‌های او">
+<title>خاک پای همراهان IRDUB | محسن حسینی</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green:#087b43;
+  --green-deep:#043b25;
+  --white:#fff;
+  --ink:#173b2a;
+  --muted:#718276;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  min-height:100vh;
+  overflow-x:hidden;
+  font-family:"Vazirmatn",sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(ellipse at 12% 7%,rgba(40,203,117,.43),transparent 29%),
+    radial-gradient(ellipse at 92% 32%,rgba(9,151,80,.35),transparent 30%),
+    radial-gradient(ellipse at 50% 100%,rgba(20,134,77,.4),transparent 35%),
+    linear-gradient(145deg,#032e1c 0%,#075b36 42%,#087b43 72%,#03452a 100%);
+  background-attachment:fixed;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.12;
+  background-image:radial-gradient(rgba(255,255,255,.8) .7px,transparent .7px);
+  background-size:25px 25px;
+  mask-image:linear-gradient(to bottom,#000,transparent 85%);
+}
+
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:3px solid #b8ffe0;outline-offset:4px}
+
+.page{
+  position:relative;
+  width:min(100% - 32px,1000px);
+  margin:0 auto;
+  padding:44px 0 28px;
+}
+
+/* پروفایل */
+.profile{
+  position:relative;
+  isolation:isolate;
+  padding:36px 30px 30px;
+  overflow:hidden;
+  text-align:center;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:32px;
+  background:linear-gradient(145deg,rgba(255,255,255,.15),rgba(255,255,255,.045));
+  box-shadow:0 30px 80px rgba(0,25,12,.23),inset 0 1px 0 rgba(255,255,255,.15);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+}
+
+.profile::before,.profile::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  border-radius:50%;
+  pointer-events:none;
+}
+
+.profile::before{
+  width:330px;height:330px;top:-245px;
+  left:calc(50% - 165px);
+  background:rgba(255,255,255,.13);
+  filter:blur(8px);
+}
+
+.profile::after{
+  width:230px;height:230px;
+  right:-170px;bottom:-160px;
+  border:1px solid rgba(255,255,255,.13);
+  box-shadow:0 0 0 22px rgba(255,255,255,.025),0 0 0 45px rgba(255,255,255,.02);
+}
+
+/* قاب لوگوی دایره‌ای */
+.avatar-wrap{
+  position:relative;
+  width:184px;height:184px;
+  margin:0 auto 29px;
+  isolation:isolate;
+}
+
+.avatar-halo{
+  position:absolute;
+  inset:-13px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.22),transparent 68%);
+  filter:blur(7px);
+  z-index:-1;
+}
+
+.avatar-ring{
+  position:relative;
+  width:100%;height:100%;
+  padding:7px;
+  border-radius:50%;
+  background:conic-gradient(
+    from 15deg,
+    #fff 0deg,
+    #baffd5 48deg,
+    #12b86a 95deg,
+    #fff 145deg,
+    #91dfff 200deg,
+    #fff 252deg,
+    #079b51 310deg,
+    #fff 360deg
+  );
+  box-shadow:
+    0 0 0 4px rgba(255,255,255,.24),
+    0 0 0 9px rgba(255,255,255,.075),
+    0 15px 40px rgba(0,24,12,.42),
+    inset 0 0 0 1px rgba(255,255,255,.85);
+}
+
+.avatar-ring::before{
+  content:"";
+  position:absolute;
+  inset:3px;
+  border:1px solid rgba(255,255,255,.95);
+  border-radius:50%;
+  pointer-events:none;
+  z-index:2;
+}
+
+.avatar{
+  display:block;
+  width:100%;height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:center;
+  border:3px solid #fff;
+  background:#fff;
+}
+
+/* الماس کریستالی */
+.diamond{
+  position:absolute;
+  z-index:5;
+  width:45px;height:45px;
+  left:50%;bottom:0;
+  transform:translate(-50%,23%) rotate(45deg);
+  border:2px solid #fff;
+  border-radius:5px;
+  background:linear-gradient(135deg,#fff 0%,#dffaff 15%,#70d5ff 28%,#197ce0 44%,#064ca9 56%,#b9efff 72%,#fff 84%,#55bfff 100%);
+  box-shadow:0 0 0 3px rgba(255,255,255,.18),0 8px 22px rgba(0,24,85,.5),inset 2px 2px 5px rgba(255,255,255,.9),inset -3px -3px 6px rgba(0,35,100,.35);
+  overflow:hidden;
+}
+
+.diamond::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(45deg,transparent 37%,rgba(255,255,255,.95) 38%,transparent 44%),linear-gradient(135deg,transparent 43%,rgba(255,255,255,.6) 44%,transparent 49%);
+}
+
+.diamond::after{
+  content:"";
+  position:absolute;
+  top:-15%;left:15%;
+  width:24%;height:135%;
+  transform:rotate(24deg);
+  background:rgba(255,255,255,.8);
+  filter:blur(1.5px);
+}
+
+.name{
+  margin:0;
+  color:#fff;
+  font-size:clamp(23px,4vw,34px);
+  line-height:1.8;
+  font-weight:900;
+  letter-spacing:-.5px;
+  text-shadow:0 3px 18px rgba(0,0,0,.2);
+}
+
+.handle{
+  display:inline-flex;
+  direction:ltr;
+  align-items:center;
+  justify-content:center;
+  margin-top:7px;
+  padding:5px 13px;
+  color:#e0ffed;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(0,45,25,.16);
+  border-radius:30px;
+  font-size:13px;
+  font-weight:700;
+}
+
+/* متن معرفی */
+.bio{
+  width:min(100%,700px);
+  margin:26px auto 0;
+  padding:22px 24px;
+  text-align:right;
+  color:var(--ink);
+  background:#fff;
+  border:1px solid rgba(255,255,255,.95);
+  border-radius:24px;
+  box-shadow:0 16px 40px rgba(0,30,15,.15),inset 0 1px 0 #fff;
+}
+
+.bio-title{
+  margin-bottom:8px;
+  color:#087b43;
+  font-size:17px;
+  font-weight:900;
+}
+
+.bio p{
+  margin:4px 0;
+  font-size:13.5px;
+  line-height:2.15;
+  overflow-wrap:anywhere;
+}
+
+.bio a{color:#087b43;font-weight:800;text-underline-offset:3px}
+.bio a:hover{text-decoration:underline}
+
+/* عنوان بخش‌ها */
+.section{margin-top:34px}
+
+.section-heading{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:0 4px 17px;
+  color:#fff;
+}
+
+.section-heading::before{
+  content:"";
+  flex:0 0 5px;
+  width:5px;height:28px;
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 0 16px rgba(255,255,255,.32);
+}
+
+.section-heading h2{margin:0;font-size:21px;font-weight:900}
+
+/* کارت‌های وب‌سایت */
+.blogs{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+
+.blog{
+  --accent:#0b9250;
+  --accent-soft:#eaf9ef;
+  position:relative;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  min-width:0;
+  padding:19px 17px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:23px;
+  background:#fff;
+  box-shadow:0 12px 32px rgba(0,28,14,.14);
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+
+.blog::before{
+  content:"";
+  position:absolute;
+  top:0;right:0;bottom:0;
+  width:5px;
+  background:var(--accent);
+}
+
+.blog::after{
+  content:"";
+  position:absolute;
+  width:115px;height:115px;
+  left:-72px;bottom:-78px;
+  border-radius:50%;
+  background:var(--accent-soft);
+  pointer-events:none;
+}
+
+.blog:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,28,14,.22)}
+
+.blog:nth-child(1){--accent:#d97a16;--accent-soft:#fff0dc}
+.blog:nth-child(2){--accent:#07854a;--accent-soft:#dcf9e8}
+.blog:nth-child(3){--accent:#2477d4;--accent-soft:#e2efff}
+.blog:nth-child(4){--accent:#8651c9;--accent-soft:#f0e5ff}
+
+.blog-image{
+  position:relative;
+  z-index:1;
+  flex:0 0 78px;
+  width:78px;height:78px;
+  object-fit:contain;
+  padding:3px;
+  border-radius:20px;
+  border:2px solid var(--accent-soft);
+  background:#fff;
+}
+
+.blog-info{position:relative;z-index:1;min-width:0;flex:1}
+
+.blog h3{
+  margin:0 0 8px;
+  color:#173b2a;
+  font-size:14px;
+  font-weight:900;
+  line-height:1.95;
+  overflow-wrap:anywhere;
+}
+
+.blog-role{color:var(--accent);font-size:12px;font-weight:900;margin-bottom:3px}
+.blog-count{color:var(--muted);font-size:11px;font-weight:600}
+
+.blog-arrow{
+  position:relative;
+  z-index:1;
+  display:grid;
+  place-items:center;
+  flex:0 0 28px;
+  width:28px;height:28px;
+  border-radius:50%;
+  color:var(--accent);
+  background:var(--accent-soft);
+  font-size:20px;
+  transition:transform .2s ease;
+}
+
+.blog:hover .blog-arrow{transform:translateX(-3px)}
+
+/* پیام‌رسان‌ها */
+.contacts{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+
+.contact{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-width:0;
+  padding:15px 8px;
+  border:1px solid rgba(255,255,255,.95);
+  border-radius:18px;
+  color:#087b43;
+  background:#fff;
+  box-shadow:0 10px 25px rgba(0,28,14,.13);
+  font-size:13px;
+  font-weight:900;
+  transition:transform .2s ease,background .2s ease;
+}
+
+.contact:hover{transform:translateY(-3px);background:#eafff2}
+
+.contact svg{display:block;flex:0 0 23px;width:23px;height:23px}
+
+footer{padding:30px 0 8px;text-align:center;color:rgba(255,255,255,.78);font-size:12px}
+
+@media(max-width:720px){
+  .page{width:min(100% - 22px,520px);padding-top:20px}
+  .profile{padding:30px 16px 20px;border-radius:27px}
+  .blogs{grid-template-columns:1fr;gap:12px}
+  .blog{padding:15px}
+  .blog-image{flex-basis:68px;width:68px;height:68px;border-radius:17px}
+  .bio{padding:18px;margin-top:24px}
+  .section{margin-top:28px}
+}
+
+@media(max-width:390px){
+  .avatar-wrap{width:162px;height:162px}
+  .bio{padding:15px}
+  .bio p{font-size:12.5px}
+  .contacts{gap:6px}
+  .contact{gap:4px;padding:13px 3px;font-size:11px}
+  .contact svg{flex-basis:19px;width:19px;height:19px}
+  .blog{gap:10px;padding:13px}
+  .blog h3{font-size:13px}
+  .blog-arrow{flex-basis:24px;width:24px;height:24px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;transition:none!important}
+}
+</style>
+</head>
+
+<body>
+<main class="page">
+
+<header class="profile">
+  <div class="avatar-wrap">
+    <div class="avatar-halo"></div>
+    <div class="avatar-ring">
+      <img class="avatar" src="https://dl.blogix.ir/20261015091530577793.webp" alt="تصویر پروفایل">
+    </div>
+    <div class="diamond" aria-hidden="true"></div>
+  </div>
+
+  <h1 class="name">خاک پای همراهان IRDUB</h1>
+  <div class="handle">@stingr</div>
+
+  <div class="bio">
+    <div class="bio-title">خاک پای همراهان ایران دوبله</div>
+    <p>اگه امری داشتید این راه های ارتباطیه:</p>
+    <p>
+      تلگرام و سوپر اپلیکیشن روبیکا (پول دادن بهم بگم سوپر وگرنه سگ نمیگه):
+      <a href="https://t.me/imstingr" target="_blank" rel="noopener noreferrer">@imstingr</a>
+    </p>
+    <p>
+      بله و ایتا که در زمان قطعی اینترنت بین المللی موجود می باشد:
+      <a href="https://ble.ir/stingr" target="_blank" rel="noopener noreferrer">@stingr</a>
+    </p>
+    <p>جیمیل: <a href="mailto:mrstingr@gmail.com">mrstingr@gmail.com</a></p>
+    <p>- محسن حسینی</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="section-heading"><h2>وب‌سایت‌های من</h2></div>
+
+  <div class="blogs">
+
+    <!-- کرنر مارکت -->
+    <a class="blog" href="https://cornermarkt.blogix.ir/" target="_blank" rel="noopener noreferrer">
+      <img class="blog-image"
+           src="https://dl.blogix.ir/20260415012826767351.webp"
+           alt="لوگوی کرنر مارکت"
+           loading="lazy">
+      <div class="blog-info">
+        <h3>کرنر مارکت | سامانه جامع مدیریت پیشنهادات و ارتباطات فوتبالی</h3>
+        <div class="blog-role">مؤسس</div>
+        <div class="blog-count">۳۳ پست</div>
+      </div>
+      <span class="blog-arrow" aria-hidden="true">‹</span>
+    </a>
+
+    <!-- ایران دوبله -->
+    <a class="blog" href="https://irdub.ir/" target="_blank" rel="noopener noreferrer">
+      <img class="blog-image"
+           src="https://dl.blogix.ir/20261015091530577793.webp"
+           alt="لوگوی ایران دوبله"
+           loading="lazy">
+      <div class="blog-info">
+        <h3>ایران دوبله | مرجع رسمی پادکست، دوبله، گویندگی و صدا</h3>
+        <div class="blog-role">مدیر</div>
+        <div class="blog-count">۴۷۷ پست</div>
+      </div>
+      <span class="blog-arrow" aria-hidden="true">‹</span>
+    </a>
+
+    <!-- زند لیگ -->
+    <a class="blog" href="https://league.blogix.ir/" target="_blank" rel="noopener noreferrer">
+      <img class="blog-image"
+           src="https://dl.blogix.ir/20260621212229189732.webp"
+           alt="لوگوی زند لیگ"
+           loading="lazy">
+      <div class="blog-info">
+        <h3>زند لیگ | بزرگترین لیگ مجازی فوتبال در ایران</h3>
+        <div class="blog-role">موسس و مدیر</div>
+        <div class="blog-count">۲ پست</div>
+      </div>
+      <span class="blog-arrow" aria-hidden="true">‹</span>
+    </a>
+
+    <!-- حزب خداپرستان -->
+    <a class="blog" href="https://godwork.blogix.ir/" target="_blank" rel="noopener noreferrer">
+      <img class="blog-image"
+           src="https://dl.blogix.ir/20260803183645682853.webp"
+           alt="لوگوی حزب خداپرستان"
+           loading="lazy">
+      <div class="blog-info">
+        <h3>☪✝✡ حزب خدا پرستان | The Circle of God-Worshipp ☪✝✡</h3>
+        <div class="blog-role">آقا سید</div>
+        <div class="blog-count">۶ پست</div>
+      </div>
+      <span class="blog-arrow" aria-hidden="true">‹</span>
+    </a>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading"><h2>راه‌های ارتباطی</h2></div>
+
+  <div class="contacts">
+
+    <!-- تلگرام -->
+    <a class="contact" href="https://t.me/imstingr" target="_blank" rel="noopener noreferrer" aria-label="تلگرام">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="12" fill="#229ED9"/>
+        <path d="M18.9 6.4 16.5 18c-.18.82-.66 1.02-1.33.64l-3.67-2.7-1.77 1.7c-.2.2-.37.37-.76.37l.26-3.73 6.8-6.14c.3-.26-.07-.4-.46-.14l-8.4 5.3-3.62-1.13c-.79-.25-.8-.79.17-1.17l14.15-5.45c.66-.24 1.23.16 1.02 1.05Z" fill="#fff"/>
+      </svg>
+      <span>تلگرام</span>
+    </a>
+
+    <!-- روبیکا -->
+    <a class="contact" href="https://rubika.ir/imstingr" target="_blank" rel="noopener noreferrer" aria-label="روبیکا">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <defs>
+          <linearGradient id="rubikaGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffb13b"/>
+            <stop offset=".48" stop-color="#f34b73"/>
+            <stop offset="1" stop-color="#833be8"/>
+          </linearGradient>
+        </defs>
+        <rect x="1" y="1" width="30" height="30" rx="10" fill="url(#rubikaGradient)"/>
+        <path d="M9 8h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-5l-5 4v-4H9a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2Z" fill="#fff"/>
+        <circle cx="12" cy="14" r="1.2" fill="#e54b8c"/>
+        <circle cx="16" cy="14" r="1.2" fill="#e54b8c"/>
+        <circle cx="20" cy="14" r="1.2" fill="#e54b8c"/>
+      </svg>
+      <span>روبیکا</span>
+    </a>
+
+    <!-- بله -->
+    <a class="contact" href="https://ble.ir/stingr" target="_blank" rel="noopener noreferrer" aria-label="بله">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <defs>
+          <linearGradient id="baleGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#43d7a0"/>
+            <stop offset="1" stop-color="#0a9d70"/>
+          </linearGradient>
+        </defs>
+        <rect x="1" y="1" width="30" height="30" rx="10" fill="url(#baleGradient)"/>
+        <path d="M8 10.5A3.5 3.5 0 0 1 11.5 7h9a3.5 3.5 0 0 1 3.5 3.5v7a3.5 3.5 0 0 1-3.5 3.5h-4.2L11 25v-4h-.5A3.5 3.5 0 0 1 7 17.5v-7Z" fill="#fff"/>
+        <path d="M12 12h8M12 15.5h6" stroke="#12a77b" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <span>بله</span>
+    </a>
+
+    <!-- جیمیل -->
+    <a class="contact" href="mailto:mrstingr@gmail.com" aria-label="جیمیل">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="2" y="5" width="28" height="22" rx="5" fill="#fff" stroke="#dadce0" stroke-width="1.3"/>
+        <path d="M5 10 16 18l11-8" fill="none" stroke="#ea4335" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5 11v11" stroke="#4285f4" stroke-width="3" stroke-linecap="round"/>
+        <path d="M27 11v11" stroke="#34a853" stroke-width="3" stroke-linecap="round"/>
+        <path d="M5 22h22" stroke="#fbbc04" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span>جیمیل</span>
+    </a>
+
+  </div>
+</section>
+
+<footer>irdub.ir</footer>
+
+</main>
+</body>
+</html>
